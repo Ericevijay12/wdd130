@@ -123,15 +123,24 @@
 
         .sociallinks {
             margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .sociallinks a {
-            margin: 0 5px;
+            margin: 0 10px;
+            display: inline-block;
         }
 
         .sociallinks img {
             max-width: 30px;
             height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sociallinks img:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -162,11 +171,11 @@
         <section class="adventures">
             <h2>Adventure Awaits You!</h2>
             <div class="gallery">
-                <img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1">
-                <img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2">
-                <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3">
-                <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4">
-                <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5">
+                <a href="#"><img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1"></a>
+                <a href="#"><img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2"></a>
+                <a href="#"><img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3"></a>
+                <a href="#"><img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4"></a>
+                <a href="#"><img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5"></a>
             </div>
         </section>
     </main>
