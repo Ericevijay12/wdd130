@@ -1,199 +1,71 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitewater Rafting Adventures</title>
-    <meta name="description" content="A website for a whitewater rafting company.">
+    <title>Rafting Site Plan | Eric Evijay Ohiani</title>
+    <meta name="description" content="The rafting site plan includes the site purpose, the target audience, branding information, and a style guide for the course website project.">
     <meta name="author" content="Eric Evijay Ohiani">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-        :root {
-            --primary-color: #396e94;
-            --secondary-color: #e7c24f;
-            --accent1-color: #a43312;
-            --accent2-color: #381d2a;
-            --heading-font: 'Roboto', sans-serif;
-            --paragraph-font: 'Roboto', sans-serif;
-        }
-
-        body {
-            font-family: var(--paragraph-font);
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 10px;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            padding: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section {
-            display: none;
-        }
-
-        section.active {
-            display: block;
-        }
-
-        h2 {
-            font-family: var(--heading-font);
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px 0;
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        address {
-            font-style: normal;
-            line-height: 1.6;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 5px;
-        }
-
-        input, textarea, button {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: var(--secondary-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="styles/site-plan-rafting.css">
+  </head>
+  <body>
     <header>
-        <h1>Whitewater Rafting Adventures</h1>
-        <nav>
-            <a href="#" data-section="home">Home</a>
-            <a href="#" data-section="about">About Us</a>
-            <a href="#" data-section="trips">Trips</a>
-            <a href="#" data-section="contact">Contact Us</a>
-        </nav>
+      <h1>Rafting Site Plan</h1>
+      <div>Eric Evijay Ohiani</div>
     </header>
-    
     <main>
-        <section id="home" class="active">
-            <h2>Welcome to Whitewater Rafting Adventures</h2>
-            <img src="https://i.postimg.cc/6ysbGVk8/image.jpg" alt="Whitewater Rafting Adventure">
-            <p>Experience the thrill and excitement of whitewater rafting with us. Our expert guides will ensure you have a safe and memorable adventure on the river.</p>
-        </section>
+      <h2>Overview</h2>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <img src="https://i.postimg.cc/bd1HW75v/image.jpg" alt="About Us">
-            <p>We are a dedicated team of rafting enthusiasts committed to providing the best whitewater rafting experiences. Our team has years of experience navigating the most exciting rivers. Visit us at:</p>
-            <address>
-                525 South Center St.<br>
-                Rexburg, ID 83460-0000<br>
-                Brigham Young University-Idaho
-            </address>
-        </section>
+      <h3>Purpose</h3>
+      <p>The purpose of this rafting site is to provide an online presence for our rafting business, allowing potential customers to learn about our services, book trips, and get excited about white water rafting adventures.</p>
 
-        <section id="trips">
-            <h2>Our Trips</h2>
-            <img src="https://i.postimg.cc/yD5YxYHD/image.jpg" alt="Our Trips">
-            <p>Choose from a variety of trips ranging from beginner to advanced levels. Whether you're looking for a leisurely float or a heart-pounding adventure, we have the perfect trip for you.</p>
-        </section>
+      <h3>Audience</h3>
+      <p>The target audience for the rafting website includes:
+        <ul>
+          <li>Adventure enthusiasts looking for thrilling outdoor activities.</li>
+          <li>Families seeking exciting and safe vacation activities.</li>
+          <li>Corporate groups interested in team-building events.</li>
+        </ul>
+        Scenario questions:
+        <ol>
+          <li>Who are the primary users of the website? Adventure enthusiasts, families, and corporate groups.</li>
+          <li>What information are users looking for? Details about rafting trips, booking information, safety measures, and contact information.</li>
+          <li>Why would users choose our rafting services? For the adventure, safety, and excellent customer service we provide.</li>
+        </ol>
+      </p>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <img src="https://i.postimg.cc/w30z3T59/image.jpg" alt="Contact Us">
-            <p>We'd love to hear from you! If you have any questions or would like to book a trip, please get in touch with us.</p>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <img src="images/logo.png" alt="Rafting Site Logo">
+
+      <h2>Style Guide</h2>
+      <h3>Color Palette</h3>
+      <p>Primary Color: #396e94<br>Secondary Color: #e7c24f<br>Accent1 Color: #a43312<br>Accent2 Color: #381d2a<br>Palette URL: <a href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c" target="_blank">https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a></p>
+
+      <h3>Typography</h3>
+      <h4>Headings Example Font</h4>
+      <p>The headings will use 'Roboto', sans-serif.</p>
+      <h4>Normal Text/Paragraph Example Font</h4>
+      <p>The paragraphs will use 'Open Sans', sans-serif.</p>
+      <h4>Colored Callout Example Font</h4>
+      <p>Example text - Lorem ipsum.</p>
+
+      <h3>Navigation</h3>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Trips</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <h2>Wireframes</h2>
+      <h3>Home Page Wireframe</h3>
+      <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-home.png" alt="Home Page Wireframe Example Design" width="700">
+      <h3>About Us Page Wireframe</h3>
+      <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-aboutus-update.png" alt="About Us Page Wireframe Design" width="700">
     </main>
-    
     <footer>
-        <p>&copy; 2024 Whitewater Rafting Adventures. All rights reserved. Created by Eric Evijay Ohiani for BYU-I WDD 130.</p>
+      <p>©2024 🌴 Rafting Site Document 🌴 Eric Evijay Ohiani 🌴 WDD 130</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('nav a');
-            const sections = document.querySelectorAll('main section');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const sectionId = link.getAttribute('data-section');
-
-                    sections.forEach(section => {
-                        section.classList.remove('active');
-                        if (section.id === sectionId) {
-                            section.classList.add('active');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body>
+  </body>
 </html>
