@@ -6,7 +6,134 @@
     <title>Rafting Company | About Us</title>
     <meta name="description" content="Learn about our exciting white water rafting adventures.">
     <meta name="author" content="Eric Evijay Ohiani">
-    <link rel="stylesheet" href="styles/rafting.css">
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 20px;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero article {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 20px;
+        }
+
+        .adventures {
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .sociallinks {
+            margin-top: 10px;
+        }
+
+        .sociallinks a {
+            margin: 0 5px;
+        }
+
+        .sociallinks img {
+            max-width: 30px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,7 +149,7 @@
         <div class="hero" style="background-image: url('https://i.postimg.cc/RVk7M6YD/marvel-mobile-wallpaper-17.jpg');">
             <h1>Rafting Company Name</h1>
             <article>
-                <img src="https://i.postimg.cc/mDjzCh8B/54d3e2f3-f9c8-4369-ba5b-44305693b474.jpg" alt="Happy Client" style="max-width: 100%;">
+                <img src="https://i.postimg.cc/mDjzCh8B/54d3e2f3-f9c8-4369-ba5b-44305693b474.jpg" alt="Happy Client">
                 <p>Meet Sarah, one of our satisfied clients! She embarked on an unforgettable white water rafting adventure with us. From navigating thrilling rapids to taking in breathtaking scenery, Sarah couldn't stop smiling throughout the entire trip. Our experienced guides ensured her safety while creating memories that will last a lifetime.</p>
             </article>
         </div>
@@ -32,19 +159,22 @@
             <p>Over the years, we've expanded our operations, explored new rivers, and welcomed adventurers from all walks of life. From the roaring currents of the Colorado River to the serene beauty of the Snake River, we've crafted unforgettable experiences for our clients.</p>
             <p>Our commitment to safety, environmental stewardship, and exceptional customer service remains unwavering. Join us as we continue to write new chapters in the history of white water rafting!</p>
         </section>
-        <section>
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
-            <img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1" style="max-width: 100%;">
-            <img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2" style="max-width: 100%;">
-            <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3" style="max-width: 100%;">
-            <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4" style="max-width: 100%;">
-            <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5" style="max-width: 100%;">
+            <div class="gallery">
+                <img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1">
+                <img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2">
+                <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3">
+                <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4">
+                <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5">
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Rafting Company. All rights reserved.</p>
         <nav class="sociallinks">
-            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.facebook.com/Ericevijayohiani?mibextid=ZbWKwL"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/ericevijay-ohiani-40a22a271?trk=contact-info"><img src="images/linkedin.svg" alt="LinkedIn"></a>
             <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
             <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
         </nav>
