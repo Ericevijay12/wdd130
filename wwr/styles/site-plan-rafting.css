@@ -1,108 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #396e94;
-    --secondary-color: #e7c24f;
-    --accent1-color: #a43312;
-    --accent2-color: #381d2a;
-    --heading-font: 'Roboto', sans-serif;
-    --paragraph-font: 'Roboto', sans-serif;
+  --primary-color: #396e94;
+  --secondary-color: #e7c24f;
+  --accent1-color: #a43312;
+  --accent2-color: #381d2a;
+  --heading-font: 'Roboto', sans-serif;
+  --paragraph-font: 'Open Sans', sans-serif;
+  --nav-background-color: #396e94;
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: #e7c24f;
+  --nav-hover-background-color: #a43312;
 }
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #f4f4f4;
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
 header {
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section {
-    display: none;
-}
-
-section.active {
-    display: block;
-}
-
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
+  padding: 20px;
+  background-color: var(--accent1-color);
 }
 
 p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+  padding: 25px;
 }
 
-address {
-    font-style: normal;
-    line-height: 1.6;
+nav {
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+nav a {
+  display: block;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1rem;
 }
 
-label {
-    margin-bottom: 5px;
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
 }
 
-input, textarea, button {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    margin-top: 40px;
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
 }
