@@ -22,28 +22,32 @@
         }
 
         header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
             background-color: #333;
             color: #fff;
             padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         header img {
-            max-width: 100%;
+            max-width: 100px;
             height: auto;
+        }
+
+        header h1 {
+            margin-left: 20px;
         }
 
         nav {
             display: flex;
+            justify-content: space-around;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px;
-            margin: 0 5px;
         }
 
         nav a:hover {
@@ -59,6 +63,7 @@
         }
 
         .hero {
+            background-image: url('https://i.postimg.cc/RVk7M6YD/marvel-mobile-wallpaper-17.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -105,10 +110,26 @@
             grid-gap: 20px;
         }
 
+        .gallery figure {
+            position: relative;
+        }
+
         .gallery img {
             max-width: 100%;
             height: auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery figcaption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-size: 1rem;
         }
 
         footer {
@@ -124,7 +145,7 @@
         .sociallinks {
             margin-top: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
         }
 
@@ -146,7 +167,8 @@
 </head>
 <body>
     <header>
-        <img src="https://i.postimg.cc/MpnFLQQ3/2726794c-b4dd-4107-baee-a072756bdcfe.jpg" alt="Rafting Company Logo" style="max-width: 200px;">
+        <img src="https://i.postimg.cc/MpnFLQQ3/2726794c-b4dd-4107-baee-a072756bdcfe.jpg" alt="Rafting Company Logo">
+        <h1>Rafting Company</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -155,7 +177,7 @@
         </nav>
     </header>
     <main>
-        <div class="hero" style="background-image: url('https://i.postimg.cc/RVk7M6YD/marvel-mobile-wallpaper-17.jpg');">
+        <div class="hero">
             <h1>Rafting Company Name</h1>
             <article>
                 <img src="https://i.postimg.cc/mDjzCh8B/54d3e2f3-f9c8-4369-ba5b-44305693b474.jpg" alt="Happy Client">
@@ -171,11 +193,26 @@
         <section class="adventures">
             <h2>Adventure Awaits You!</h2>
             <div class="gallery">
-                <a href="#"><img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1"></a>
-                <a href="#"><img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2"></a>
-                <a href="#"><img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3"></a>
-                <a href="#"><img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4"></a>
-                <a href="#"><img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5"></a>
+                <figure>
+                    <img src="https://i.postimg.cc/fTZqMP0d/Screenshot-20240625-074955.jpg" alt="Rafting Adventure 1">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/VsXHQw51/Screenshot-20240625-075058-Canvas-Student.jpg" alt="Rafting Adventure 2">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Rafting Adventure 3">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Rafting Adventure 4">
+                    <figcaption>Full Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Rafting Adventure 5">
+                    <figcaption>Extreme Adventure</figcaption>
+                </figure>
             </div>
         </section>
     </main>
