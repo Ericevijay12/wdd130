@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eric Evijay Ohiani's personal webpage for WDD 130 course at BYU-I.">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <title>Eric Evijay Ohiani | WDD 130</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional specific styles */
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        aside {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            position: relative; /* Added for positioning */
+        }
+
+        aside img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .landscape-description {
+            text-align: justify;
+            padding: 10px; /* Adjusted padding */
+        }
+
+        /* Float profile image */
+        main img {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Class Selectors */
+        /* Styling for boxes */
+        .box {
+            margin: 1rem;
+            border: 1px solid rgba(0,0,0,.1);
+            padding: 1rem;
+            background-color: #ddd;
+            color: #000;
+        }
+
+        /* Navigation styling */
+        header nav {
+            background-color: steelblue;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header nav a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            align-items: center;
+            max-width: 840px;
+            margin: auto;
+        }
+
+        header, .grid, footer {
+            max-width: 840px;
+            margin: auto;
+        }
+
+        main {
+            grid-column: 2 / 3;
+            margin: 1rem;
+        }
+
+        aside {
+            width: 20rem;
+            position: relative;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        h1 {
+            border-bottom: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="wwr/">Rafting Website</a>
+            <a href="wwr/site-plan-rafting.html">Rafting Site Plan</a>
+            <a href="https://www.linkedin.com/in/ericevijay-ohiani-40a22a271?trk=contact-info" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/Ericevijayohiani?mibextid=ZbWKwL" target="_blank">Facebook</a>
+        </nav>
+    </header>
+    <div class="grid">
+        <aside>
+            <h2>Nigeria</h2>
+            <img src="https://i.postimg.cc/bsWMgmHC/nigeria-flag.jpg" alt="Nigeria Flag" width="200">
+            <p class="landscape-description">Nigeria is a diverse country located in West Africa, known for its rich cultural heritage, vibrant music scene, and bustling cities. As the most populous country in Africa, Nigeria plays a significant role in politics, economics, and culture on the continent. From its thriving Nollywood film industry to its growing tech sector, Nigeria continues to influence global trends and attract visitors from around the world.</p>
+        </aside>
+        <main>
+            <h1>Eric Evijay Ohiani | WDD 130</h1>
+            <img src="https://i.postimg.cc/zDF6V7YX/Screenshot-20240601-122420-Gallery.jpg" alt="Eric Evijay Ohiani" width="200">
+            <p>Hello! My name is Eric Evijay Ohiani and I am from Abuja, Nigeria. I enjoy designing and modeling cars in the automotive industry, and I also love programming, though I'm still new to web development. I hope to learn more from this course to enhance my experience in coding for autonomous, self-driving cars.</p>
+            <ul class="box">
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple" target="_blank">Philadelphia Pennsylvania Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/paris-france-temple" target="_blank">Paris France Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/lima-peru-los-olivos-temple" target="_blank">Lima Peru Los Olivos Temple</a></li>
+            </ul>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 🌴 Eric Evijay Ohiani 🌴 Abuja, Nigeria</p>
+    </footer>
+</body>
+</html>
