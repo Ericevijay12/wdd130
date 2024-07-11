@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafting Company | Contact Us</title>
+    <meta name="description" content="Get in touch with us for any inquiries or questions about our white water rafting adventures.">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="https://i.postimg.cc/MpnFLQQ3/2726794c-b4dd-4107-baee-a072756bdcfe.jpg" alt="Rafting Company Logo">
+        <h1>Rafting Company</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <section>
+            <h2>Company Information</h2>
+            <p>Address: 123 River Road, Rafting Town, RT 45678</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@raftingcompany.com</p>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434593575!2d144.9582283156898!3d-37.81627917975139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4525df64fb%3A0x20ba8f66f1c5a10b!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1633003521567!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>Our Team</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Employee 1">
+                    <figcaption>John Doe - Adventure Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Employee 2">
+                    <figcaption>Jane Smith - Customer Service</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Employee 3">
+                    <figcaption>Bob Johnson - Safety Officer</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <input type="radio" id="general" name="purpose" value="general">
+                    <label for="general">General Inquiry</label><br>
+                    <input type="radio" id="reservation" name="purpose" value="reservation">
+                    <label for="reservation">Reservation Question</label><br>
+                    <input type="radio" id="website" name="purpose" value="website">
+                    <label for="website">Website Suggestion</label><br>
+                </fieldset>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Quiz</h2>
+            <p>Test your knowledge about our company and services!</p>
+            <form action="submit_quiz.php" method="post">
+                <label for="question1">1. What is our company address?</label><br>
+                <input type="radio" id="q1a" name="question1" value="option1">
+                <label for="q1a">123 River Road</label><br>
+                <input type="radio" id="q1b" name="question1" value="option2">
+                <label for="q1b">456 Mountain View</label><br>
+                <input type="radio" id="q1c" name="question1" value="option3">
+                <label for="q1c">789 Ocean Drive</label><br><br>
+
+                <label for="question2">2. Who is our Customer Service representative?</label><br>
+                <input type="radio" id="q2a" name="question2" value="option1">
+                <label for="q2a">John Doe</label><br>
+                <input type="radio" id="q2b" name="question2" value="option2">
+                <label for="q2b">Jane Smith</label><br>
+                <input type="radio" id="q2c" name="question2" value="option3">
+                <label for="q2c">Bob Johnson</label><br><br>
+
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Rafting Company. All rights reserved.</p>
+        <nav class="sociallinks">
+            <a href="https://www.facebook.com/Ericevijayohiani?mibextid=ZbWKwL"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/ericevijay-ohiani-40a22a271?trk=contact-info"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        </nav>
+        <div>
+            <a href="https://i.postimg.cc/v89hV60x/home-page-basic-wireframe-example.png" target="_blank">Contact Us Page Wireframe</a>
+        </div>
+    </footer>
+</body>
+</html>
