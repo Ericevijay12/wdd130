@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column; /* Added flex-direction */
+    flex-direction: column;
 }
 
 h1 {
