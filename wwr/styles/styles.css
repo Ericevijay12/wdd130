@@ -1,65 +1,144 @@
+/* styles/rafting.css */
+
+/* General Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-  }
-  
-  .header-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 1em;
-    background-color: #396e94;
-    color: white;
-  }
-  
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  header nav {
-    display: flex;
-    gap: 1em;
-  }
-  
-  header nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  header nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .adventures {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  
-  .adventures figure {
-    flex: 1;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
-  }
-  
-  footer {
-    background-color: #396e94;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
+}
+
+header img {
+    max-width: 100px;
+    vertical-align: middle;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav {
+    margin-top: 1rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 100%;
-  }
-  
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-  }
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+form legend {
+    font-weight: bold;
+}
+
+form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer nav.sociallinks {
+    margin-top: 1rem;
+}
+
+footer nav.sociallinks a {
+    display: inline-block;
+    margin: 0 10px;
+    opacity: 0.8;
+}
+
+footer nav.sociallinks a:hover {
+    opacity: 1;
+}
+
+footer div {
+    margin-top: 1rem;
+}
+
+footer div a {
+    color: #fff;
+    text-decoration: none;
+}
