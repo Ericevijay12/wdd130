@@ -1,173 +1,111 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafting Site Plan | Eric Evijay Ohiani</title>
-  <meta name="description" content="The rafting site plan includes the site purpose, the target audience, branding information, and a style guide for the course website project.">
-  <meta name="author" content="Eric Evijay Ohiani">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .header-container {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      padding: 1em;
-      background-color: #396e94;
-      color: white;
-    }
-
-    .logo {
-      width: 50px;
-      height: 50px;
-    }
-
-    header nav {
-      display: flex;
-      gap: 1em;
-    }
-
-    header nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    header nav a:hover {
-      text-decoration: underline;
-    }
-
-    .adventures {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-    }
-
-    .adventures figure {
-      flex: 1;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #396e94;
-      color: white;
-      padding: 1em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      margin-left: 10px;
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafting Company | Contact Us</title>
+    <meta name="description" content="Get in touch with us for any inquiries or questions about our white water rafting adventures.">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <link rel="stylesheet" href="styles/rafting.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="images/logo.png" alt="WDD 130BYU-I Logo" class="logo">
-      <h1>Rafting Site Plan</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">W1</a>
-        <a href="#">W2</a>
-        <a href="#">W3</a>
-        <a href="#">W4</a>
-        <a href="#">W5</a>
-        <a href="#">W6</a>
-        <a href="#">W7</a>
-        <a href="#">I-Learn</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <h2>Overview</h2>
-    <h3>Purpose</h3>
-    <p>The purpose of this rafting site is to provide an online presence for our rafting business, allowing potential customers to learn about our services, book trips, and get excited about white water rafting adventures.</p>
-    <h3>Audience</h3>
-    <p>The target audience for the rafting website includes:
-      <ul>
-        <li>Adventure enthusiasts looking for thrilling outdoor activities.</li>
-        <li>Families seeking exciting and safe vacation activities.</li>
-        <li>Corporate groups interested in team-building events.</li>
-      </ul>
-      Scenario questions:
-      <ol>
-        <li>Who are the primary users of the website? Adventure enthusiasts, families, and corporate groups.</li>
-        <li>What information are users looking for? Details about rafting trips, booking information, safety measures, and contact information.</li>
-        <li>Why would users choose our rafting services? For the adventure, safety, and excellent customer service we provide.</li>
-      </ol>
-    </p>
-    <h2>Branding</h2>
-    <h3>Website Logo</h3>
-    <img src="images/logo.png" alt="Rafting Site Logo">
-    <h2>Style Guide</h2>
-    <h3>Color Palette</h3>
-    <p>Primary Color: #396e94<br>Secondary Color: #e7c24f<br>Accent1 Color: #a43312<br>Accent2 Color: #381d2a<br>Palette URL: <a href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c" target="_blank">https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a></p>
-    <h3>Typography</h3>
-    <h4>Headings Example Font</h4>
-    <p>The headings will use 'Roboto', sans-serif.</p>
-    <h4>Normal Text/Paragraph Example Font</h4>
-    <p>The paragraphs will use 'Open Sans', sans-serif.</p>
-    <h4>Colored Callout Example Font</h4>
-    <p>Example text - Lorem ipsum.</p>
-    <h3>Navigation</h3>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">Trips</a>
-      <a href="#">Contact Us</a>
-    </nav>
-    <h2>Wireframes</h2>
-    <h3>Home Page Wireframe</h3>
-    <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-home.png" alt="Home Page Wireframe Example Design" width="700">
-    <h3>About Us Page Wireframe</h3>
-    <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-aboutus-update.png" alt="About Us Page Wireframe Design" width="700">
-    <h2>Adventures</h2>
-    <div class="adventures">
-      <figure>
-        <img src="images/los-dientes-del-diablo.jpg" alt="Los Dientes del Diablo">
-        <figcaption>Los Dientes del Diablo</figcaption>
-      </figure>
-      <figure>
-        <img src="images/big-mallard.jpg" alt="Big Mallard">
-        <figcaption>Big Mallard</figcaption>
-      </figure>
-      <figure>
-        <img src="images/half-day-adventure.jpg" alt="Half Day Adventure">
-        <figcaption>Half Day Adventure</figcaption>
-      </figure>
-      <figure>
-        <img src="images/full-day-adventure.jpg" alt="Full Day Adventure">
-        <figcaption>Full Day Adventure</figcaption>
-      </figure>
-      <figure>
-        <img src="images/extreme-adventure.jpg" alt="Extreme Adventure">
-        <figcaption>Extreme Adventure</figcaption>
-      </figure>
-    </div>
-  </main>
-  <footer>
-    <div class="footer-container">
-      <p>©2024 🌴 Rafting Site Document 🌴 Eric Evijay Ohiani 🌴 WDD 130</p>
-      <div class="social-icons">
-        <img src="images/facebook-icon.png" alt="Facebook">
-        <img src="images/twitter-icon.png" alt="Twitter">
-        <img src="images/instagram-icon.png" alt="Instagram">
-      </div>
-    </div>
-  </footer>
+    <header>
+        <img src="https://i.postimg.cc/MpnFLQQ3/2726794c-b4dd-4107-baee-a072756bdcfe.jpg" alt="Rafting Company Logo">
+        <h1>Rafting Company</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <section>
+            <h2>Company Information</h2>
+            <p>Address: 123 River Road, Rafting Town, RT 45678</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@raftingcompany.com</p>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434593575!2d144.9582283156898!3d-37.81627917975139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4525df64fb%3A0x20ba8f66f1c5a10b!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1633003521567!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>Our Team</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="https://i.postimg.cc/3NjLgXzW/Screenshot-20240625-075144-Canvas-Student.jpg" alt="Employee 1">
+                    <figcaption>John Doe - Adventure Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/brfCDCCK/Screenshot-20240625-075434-Canvas-Student.jpg" alt="Employee 2">
+                    <figcaption>Jane Smith - Customer Service</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.postimg.cc/xCzpdDRv/Screenshot-20240625-075457-Canvas-Student.jpg" alt="Employee 3">
+                    <figcaption>Bob Johnson - Safety Officer</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <input type="radio" id="general" name="purpose" value="general">
+                    <label for="general">General Inquiry</label><br>
+                    <input type="radio" id="reservation" name="purpose" value="reservation">
+                    <label for="reservation">Reservation Question</label><br>
+                    <input type="radio" id="website" name="purpose" value="website">
+                    <label for="website">Website Suggestion</label><br>
+                </fieldset>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Quiz</h2>
+            <p>Test your knowledge about our company and services!</p>
+            <form action="submit_quiz.php" method="post">
+                <label for="question1">1. What is our company address?</label><br>
+                <input type="radio" id="q1a" name="question1" value="option1">
+                <label for="q1a">123 River Road</label><br>
+                <input type="radio" id="q1b" name="question1" value="option2">
+                <label for="q1b">456 Mountain View</label><br>
+                <input type="radio" id="q1c" name="question1" value="option3">
+                <label for="q1c">789 Ocean Drive</label><br><br>
+
+                <label for="question2">2. Who is our Customer Service representative?</label><br>
+                <input type="radio" id="q2a" name="question2" value="option1">
+                <label for="q2a">John Doe</label><br>
+                <input type="radio" id="q2b" name="question2" value="option2">
+                <label for="q2b">Jane Smith</label><br>
+                <input type="radio" id="q2c" name="question2" value="option3">
+                <label for="q2c">Bob Johnson</label><br><br>
+
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Rafting Company. All rights reserved.</p>
+        <nav class="sociallinks">
+            <a href="https://www.facebook.com/Ericevijayohiani?mibextid=ZbWKwL"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/ericevijay-ohiani-40a22a271?trk=contact-info"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        </nav>
+        <div>
+            <a href="https://i.postimg.cc/xTr2v7Lj/Contact-us-wireframe.png" target="_blank">Contact Us Page Wireframe</a>
+        </div>
+    </footer>
 </body>
 </html>
