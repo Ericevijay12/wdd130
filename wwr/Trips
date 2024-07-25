@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trips | Eric Evijay Ohiani</title>
+  <meta name="description" content="Explore our exciting rafting adventures with detailed descriptions and available equipment.">
+  <meta name="author" content="Eric Evijay Ohiani">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.png" alt="WDD 130 BYU-I Logo" class="logo">
+      <h1>Our Trips</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="trips-section">
+      <h2>Adventure Trips</h2>
+      <p>Discover our range of exciting rafting trips, each designed to provide a unique experience on the water. Below are the details for each adventure, including trip descriptions and the equipment provided.</p>
+      
+      <div class="trip-details">
+        <h3>Los Dientes del Diablo</h3>
+        <img src="images/los-dientes-del-diablo.jpg" alt="Los Dientes del Diablo">
+        <p>Experience the thrill of "Los Dientes del Diablo," our most challenging trip featuring intense rapids and breathtaking scenery. This adventure is perfect for experienced rafters seeking an adrenaline rush.</p>
+        <h4>Included Equipment:</h4>
+        <ul>
+          <li>High-performance raft</li>
+          <li>Safety helmet</li>
+          <li>Life jacket</li>
+          <li>Oars</li>
+          <li>Wet suit</li>
+        </ul>
+      </div>
+
+      <div class="trip-details">
+        <h3>Big Mallard</h3>
+        <img src="images/big-mallard.jpg" alt="Big Mallard">
+        <p>Our "Big Mallard" trip offers a thrilling experience with moderate rapids suitable for both beginners and seasoned rafters. Enjoy a scenic journey through lush landscapes and exciting water challenges.</p>
+        <h4>Included Equipment:</h4>
+        <ul>
+          <li>Standard raft</li>
+          <li>Safety helmet</li>
+          <li>Life jacket</li>
+          <li>Oars</li>
+          <li>Wet suit</li>
+        </ul>
+      </div>
+
+      <div class="trip-details">
+        <h3>Half Day Adventure</h3>
+        <img src="images/half-day-adventure.jpg" alt="Half Day Adventure">
+        <p>The "Half Day Adventure" is a shorter trip designed for those looking for a quick but exhilarating experience on the water. Perfect for families and first-time rafters.</p>
+        <h4>Included Equipment:</h4>
+        <ul>
+          <li>Standard raft</li>
+          <li>Safety helmet</li>
+          <li>Life jacket</li>
+          <li>Oars</li>
+          <li>Wet suit</li>
+        </ul>
+      </div>
+
+      <div class="trip-details">
+        <h3>Full Day Adventure</h3>
+        <img src="images/full-day-adventure.jpg" alt="Full Day Adventure">
+        <p>Join us for a full day of excitement on the "Full Day Adventure." This trip includes extended rafting time, allowing you to experience a variety of rapids and scenic spots throughout the day.</p>
+        <h4>Included Equipment:</h4>
+        <ul>
+          <li>High-performance raft</li>
+          <li>Safety helmet</li>
+          <li>Life jacket</li>
+          <li>Oars</li>
+          <li>Wet suit</li>
+          <li>Waterproof gear bag</li>
+        </ul>
+      </div>
+
+      <div class="trip-details">
+        <h3>Extreme Adventure</h3>
+        <img src="images/extreme-adventure.jpg" alt="Extreme Adventure">
+        <p>The "Extreme Adventure" is designed for thrill-seekers looking for the most challenging rapids and wildest ride. This trip is not for the faint-hearted but offers an unparalleled adrenaline rush.</p>
+        <h4>Included Equipment:</h4>
+        <ul>
+          <li>High-performance raft</li>
+          <li>Safety helmet</li>
+          <li>Life jacket</li>
+          <li>Oars</li>
+          <li>Wet suit</li>
+          <li>Protective gloves</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p>©2024 🌴 Rafting Site Document 🌴 Eric Evijay Ohiani 🌴 WDD 130</p>
+      <div class="social-icons">
+        <img src="images/facebook-icon.png" alt="Facebook">
+        <img src="images/twitter-icon.png" alt="Twitter">
+        <img src="images/instagram-icon.png" alt="Instagram">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
