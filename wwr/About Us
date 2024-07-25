@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Eric Evijay Ohiani</title>
+  <meta name="description" content="Learn about our rafting company, meet our team, and explore the exciting trips we offer.">
+  <meta name="author" content="Eric Evijay Ohiani">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-container {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 1em;
+      background-color: #396e94;
+      color: white;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 1em;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 1em;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-section {
+      margin-bottom: 2em;
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5em;
+    }
+
+    .team-member img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-right: 1em;
+    }
+
+    .team-member h3 {
+      margin: 0;
+    }
+
+    .adventures {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .adventures figure {
+      flex: 1;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #396e94;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.png" alt="WDD 130 BYU-I Logo" class="logo">
+      <h1>About Us</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="about-section">
+      <h2>Our Story</h2>
+      <p>Welcome to our rafting adventure company! Our mission is to offer exhilarating and unforgettable rafting experiences while ensuring the highest standards of safety and fun. With years of experience and a dedicated team, we are committed to making your whitewater adventure the best it can be.</p>
+    </section>
+    
+    <section class="about-section">
+      <h2>Meet the Team</h2>
+      <div class="team-member">
+        <img src="images/team-member-1.jpg" alt="Team Member 1">
+        <div>
+          <h3>John Doe</h3>
+          <p>John is our lead rafting guide with over 10 years of experience in navigating challenging rapids. His passion for adventure and safety ensures every trip is both thrilling and secure.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="images/team-member-2.jpg" alt="Team Member 2">
+        <div>
+          <h3>Jane Smith</h3>
+          <p>Jane handles our customer service and trip planning. Her knowledge of rafting and dedication to providing excellent service makes her an invaluable part of our team.</p>
+        </div>
+      </div>
+      <!-- Add more team members as needed -->
+    </section>
+    
+    <section class="about-section">
+      <h2>Our Adventures</h2>
+      <div class="adventures">
+        <figure>
+          <img src="images/los-dientes-del-diablo.jpg" alt="Los Dientes del Diablo">
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/big-mallard.jpg" alt="Big Mallard">
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/half-day-adventure.jpg" alt="Half Day Adventure">
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/full-day-adventure.jpg" alt="Full Day Adventure">
+          <figcaption>Full Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/extreme-adventure.jpg" alt="Extreme Adventure">
+          <figcaption>Extreme Adventure</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p>©2024 🌴 Rafting Site Document 🌴 Eric Evijay Ohiani 🌴 WDD 130</p>
+      <div class="social-icons">
+        <img src="images/facebook-icon.png" alt="Facebook">
+        <img src="images/twitter-icon.png" alt="Twitter">
+        <img src="images/instagram-icon.png" alt="Instagram">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
