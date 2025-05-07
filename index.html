@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Eric Evijay Ohiani | WDD 130</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>Eric<span>Ohiani</span></h2>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="wwr/">Rafting Website</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Eric Evijay Ohiani</h1>
+          <h3>WDD 130 | Web Fundamentals</h3>
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="images/profile.jpg" alt="Eric Evijay Ohiani" class="profile">
+          </div>
+          <div class="profile-text">
+            <h2>About Me</h2>
+            <p>Hello! My name is Eric Evijay Ohiani and I am from Nigeria. I enjoy learning about web development and technology.</p>
+            
+            <h3>About Nigeria</h3>
+            <p>Nigeria is a beautiful country located in West Africa with a rich cultural heritage. Here are some facts about my country:</p>
+            
+            <ul class="country-facts">
+              <li><i class="fas fa-globe-africa"></i> Nigeria is Africa's most populous country with over 200 million people</li>
+              <li><i class="fas fa-language"></i> Home to more than 250 ethnic groups and 500+ languages</li>
+              <li><i class="fas fa-film"></i> Nollywood is the second largest film industry in the world</li>
+              <li><i class="fas fa-oil-can"></i> Nigeria is a major oil producer and has the largest economy in Africa</li>
+              <li><i class="fas fa-music"></i> Known for vibrant music scene, producing global stars like Burna Boy, Wizkid, and Davido</li>
+            </ul>
+            
+            <p>I'm excited to develop my web design skills in this course and learn how to create engaging and functional websites.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy;2025 Eric Evijay Ohiani | Nigeria</p>
+        <p id="last-modified"></p>
+      </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
