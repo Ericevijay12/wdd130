@@ -1,0 +1,120 @@
+/* CSS Variables */
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2A9D8F;
+    --accent1-color: #E9C46A;
+    --accent2-color: #E76F51;
+    --heading-font: "Merriweather", serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+}
+
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.7); /* primary color with opacity */
+    color: white;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(233, 196, 106, 0.8); /* accent1 with opacity */
+    padding: 20px;
+    max-width: 400px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 10px;
+    border: 2px solid var(--secondary-color);
+}
+
+/* Section Styling */
+section img {
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--secondary-color);
+    margin: 5px;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
