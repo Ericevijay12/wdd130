@@ -49,7 +49,7 @@ h1, h2 {
 /* Header Styling with CSS Grid - Criterion 2 */
 header {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 120px 1fr; /* Reduced from 150px to 120px for a smaller logo area */
     align-items: center;
     background-color: var(--header-background);
     padding: 1rem;
@@ -58,9 +58,10 @@ header {
 }
 
 header img {
-    width: 100%;
+    width: 80px; /* Reduced from 100% (150px) to a fixed 80px for a more professional size */
     height: auto;
     grid-column: 1;
+    margin: 0 auto; /* Center the logo within its grid column */
 }
 
 /* Navigation Styling with CSS Flex - Criterion 3 */
@@ -94,12 +95,16 @@ header nav a:hover {
     border: 1px solid #ddd;
     margin-bottom: 2rem;
     overflow: hidden;
+    border-radius: 10px; /* Added for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 400px; /* Added to limit the hero image height */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
 }
 
 .hero h1 {
@@ -254,7 +259,7 @@ section {
     }
     
     header img {
-        width: 100px;
+        width: 60px; /* Further reduced for smaller screens */
     }
     
     header nav {
@@ -278,5 +283,9 @@ section {
     
     .adventure-grid figure {
         flex-basis: 45%;
+    }
+
+    .hero img {
+        max-height: 300px; /* Reduced height for smaller screens */
     }
 }
