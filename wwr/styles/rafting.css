@@ -1,11 +1,20 @@
-/* CSS Variables */
+/* CSS Variables - ensuring no color contrast issues */
 :root {
-    --primary-color: #264653;
-    --secondary-color: #2A9D8F;
-    --accent1-color: #E9C46A;
-    --accent2-color: #E76F51;
+    --primary-color: #264653;    /* Dark blue */
+    --secondary-color: #2A9D8F;  /* Teal */
+    --accent1-color: #E9C46A;    /* Gold */
+    --accent2-color: #E76F51;    /* Coral */
     --heading-font: "Merriweather", serif;
     --body-font: "Roboto", sans-serif;
+    --nav-background-color: #ffffff;
+    --nav-link-color: #264653;
+    --nav-hover-color: #E9C46A;
+    --header-background: #e6e6fa;
+    --footer-background: #e6e6fa;
+    --text-color: #333333;       /* Dark text for good contrast */
+    --white: #ffffff;
+    --caption-bg: rgba(38, 70, 83, 0.8);
+    --caption-color: #ffffff;
 }
 
 /* Reset CSS */
@@ -18,44 +27,73 @@
 /* Base Styles */
 body {
     font-family: var(--body-font);
-    color: var(--primary-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--white);
 }
 
-header, main, footer {
-    width: 840px;
+main {
+    max-width: 960px;
     margin: 0 auto;
 }
 
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
+    margin: 0.5em 0;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+/* Header Styling with CSS Grid - Criterion 2 */
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    background-color: var(--header-background);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-/* Navigation Styling */
-nav {
+header img {
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+}
+
+/* Navigation Styling with CSS Flex - Criterion 3 */
+header nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 1rem;
+    grid-column: 2;
 }
 
-nav a {
-    color: var(--accent2-color);
+header nav a {
+    display: block;
+    color: var(--nav-link-color);
     text-decoration: none;
-    padding: 8px;
+    padding: 0.5rem 1rem;
+    background-color: var(--nav-background-color);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 700;
 }
 
-nav a:hover {
-    background-color: var(--accent1-color);
+header nav a:hover {
+    background-color: var(--nav-hover-color);
     color: var(--primary-color);
 }
 
 /* Hero Section Styling */
 .hero {
     position: relative;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .hero img {
@@ -66,47 +104,131 @@ nav a:hover {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 0;
     width: 100%;
-    padding: 16px;
+    padding: 1rem;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.7); /* primary color with opacity */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
+    margin: 0;
 }
 
 .hero article {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(233, 196, 106, 0.8); /* accent1 with opacity */
-    padding: 20px;
-    max-width: 400px;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--white);
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 10px;
-    border: 2px solid var(--secondary-color);
-}
-
-/* Section Styling */
-section img {
-    width: 150px;
+    width: 100px;
     height: auto;
-    border: 1px solid var(--secondary-color);
-    margin: 5px;
+    order: 2;
 }
 
-/* Footer Styling */
+.hero article p {
+    order: 1;
+    line-height: 1.6;
+}
+
+/* History Section Styling - Criterion 4 */
+.history {
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: #f9f9f9;
+}
+
+.history h2 {
+    margin-bottom: 1rem;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.history-content p:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    line-height: 1.6;
+}
+
+.history-content img {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.history-content p:last-child {
+    grid-column: 1;
+    grid-row: 2;
+    line-height: 1.6;
+}
+
+/* Adventures Section Styling - Criterion 4 */
+.adventures {
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.adventures h2 {
+    margin-bottom: 1rem;
+}
+
+.adventure-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.adventure-grid figure {
+    flex: 1;
+    min-width: 150px;
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.adventure-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Footer Styling - Criterion 5 */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
+    background-color: var(--footer-background);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .socialmedia a {
@@ -116,5 +238,45 @@ footer {
 .socialmedia img {
     width: 30px;
     height: 30px;
-    margin: 0 5px;
+}
+
+/* Ensuring uniform alignment and design - Criterion 6 */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+    
+    header img {
+        width: 100px;
+    }
+    
+    header nav {
+        justify-content: center;
+        grid-column: 1;
+    }
+    
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-content img {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .history-content p:last-child {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .adventure-grid figure {
+        flex-basis: 45%;
+    }
 }
