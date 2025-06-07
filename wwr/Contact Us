@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Bluesea Whitewater Rafting - Get in touch for reservations, inquiries, and information about our exciting whitewater rafting adventures">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <title>Contact Us | Bluesea Whitewater Rafting</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <style>
+        /* CSS Variables - ensuring no color contrast issues */
+        :root {
+            --primary-color: #264653;    /* Dark blue */
+            --secondary-color: #2A9D8F;  /* Teal */
+            --accent1-color: #E9C46A;    /* Gold */
+            --accent2-color: #E76F51;    /* Coral */
+            --heading-font: "Merriweather", serif;
+            --body-font: "Roboto", sans-serif;
+            --nav-background-color: #ffffff;
+            --nav-link-color: #264653;
+            --nav-hover-color: #E9C46A;
+            --header-background: #e6e6fa;
+            --footer-background: #e6e6fa;
+            --text-color: #333333;       /* Dark text for good contrast */
+            --white: #ffffff;
+            --caption-bg: rgba(38, 70, 83, 0.8);
+            --caption-color: #ffffff;
+        }
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            text-align: center;
+            margin: 0.5em 0;
+        }
+
+        /* Header Styling with CSS Grid */
+        header {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            align-items: center;
+            background-color: var(--header-background);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        header img {
+            width: auto;
+            height: 40px;
+            max-width: 80px;
+            grid-column: 1;
+            margin: 0 auto;
+        }
+
+        /* Navigation Styling with CSS Flex */
+        header nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            grid-column: 2;
+        }
+
+        header nav a {
+            display: block;
+            color: var(--nav-link-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: var(--nav-background-color);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        header nav a:hover {
+            background-color: var(--nav-hover-color);
+            color: var(--primary-color);
+        }
+
+        /* Contact Section Styles */
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .contact-details h2 {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            color: var(--secondary-color);
+            width: 20px;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* Employee Section */
+        .employees {
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+
+        .employees h2 {
+            margin-bottom: 1rem;
+        }
+
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .employee-card {
+            text-align: center;
+            background-color: var(--white);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .employee-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .employee-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-family: var(--heading-font);
+        }
+
+        .employee-card p {
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .radio-option input[type="radio"] {
+            margin: 0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Footer Styling */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--footer-background);
+            padding: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .socialmedia {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .socialmedia a {
+            text-decoration: none;
+        }
+
+        .socialmedia img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .employee-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+            }
+            
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 1rem;
+            }
+            
+            header img {
+                height: 30px;
+                max-width: 60px;
+            }
+            
+            header nav {
+                justify-content: center;
+                grid-column: 1;
+            }
+            
+            .contact-form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Bluesea Whitewater Rafting Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Contact Rapid Adventures</h1>
+        
+        <section class="contact-info">
+            <div class="contact-details">
+                <h2>Get In Touch</h2>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address:</strong><br>
+                        1234 River Rapids Drive<br>
+                        Adventure Valley, CO 80424
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        (555) 123-4567<br>
+                        Toll Free: (800) 555-RAFT
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong><br>
+                        info@rapidadventures.com<br>
+                        reservations@rapidadventures.com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Office Hours:</strong><br>
+                        Monday - Friday: 8:00 AM - 6:00 PM<br>
+                        Saturday - Sunday: 9:00 AM - 5:00 PM
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-106.123456!3d39.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzI0LjQiTiAxMDbCsDA3JzI0LjQiVw!5e0!3m2!1sen!2sus!4v1234567890" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <div class="employee-card">
+                    <img src="images/happy-client.jpg" alt="Sarah Johnson, Head Guide">
+                    <h3>Sarah Johnson</h3>
+                    <p>Head River Guide & Safety Coordinator</p>
+                </div>
+                <div class="employee-card">
+                    <img src="images/rafting1.jpg" alt="Mike Rodriguez, Senior Guide">
+                    <h3>Mike Rodriguez</h3>
+                    <p>Senior Guide & Equipment Specialist</p>
+                </div>
+                <div class="employee-card">
+                    <img src="images/Scenic-river-view.jpg" alt="Emma Thompson, Customer Service Manager">
+                    <h3>Emma Thompson</h3>
+                    <p>Customer Service Manager & Trip Coordinator</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Purpose of Your Message *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="general" name="purpose" value="general" required>
+                            <label for="general">General Inquiry</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="reservation" name="purpose" value="reservation" required>
+                            <label for="reservation">Reservation Question</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="website" name="purpose" value="website" required>
+                            <label for="website">Website Suggestion</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" placeholder="Please share your questions, comments, or suggestions..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Your Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Rapid Adventures | Eric Evijay Ohiani</p>
+        <div class="footer-links">
+            <a href="#" target="_blank">Contact Us Wireframe</a>
+        </div>
+        <nav class="socialmedia">
+            <!-- Social media links would go here -->
+        </nav>
+    </footer>
+</body>
+</html>
