@@ -15,6 +15,11 @@
     --white: #ffffff;
     --caption-bg: rgba(38, 70, 83, 0.8);
     --caption-color: #ffffff;
+    /* New footer variables */
+    --footer-dark-bg: #1a202c;  /* Dark navy background for new footer */
+    --footer-text: #ffffff;     /* White text for footer */
+    --footer-secondary-text: #d1d5db;  /* Light gray for secondary text */
+    --footer-muted-text: #9ca3af;      /* Muted gray for copyright */
 }
 
 /* Reset CSS */
@@ -60,7 +65,7 @@ header {
 header img {
     width: auto; /* Let width adjust based on height to maintain aspect ratio */
     height: 40px; /* Explicitly set height to reduce logo size */
-    max-width: 80px; /* Ensure width doesn’t exceed previous setting */
+    max-width: 80px; /* Ensure width doesn't exceed previous setting */
     grid-column: 1;
     margin: 0 auto;
 }
@@ -218,8 +223,109 @@ header nav a:hover {
     font-weight: bold;
 }
 
-/* Footer Styling - Criterion 5 */
-footer {
+/* New Footer Styling - Updated to match the dark design */
+footer.bg-gray-900 {
+    background-color: var(--footer-dark-bg);
+    color: var(--footer-text);
+    margin-top: 4rem;
+    padding: 3rem 0;
+    width: 100%;
+    max-width: none;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--footer-text);
+    font-family: var(--heading-font);
+    text-align: left;
+}
+
+.footer-section p {
+    color: var(--footer-secondary-text);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: var(--footer-muted-text);
+    margin-bottom: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--footer-secondary-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--footer-text);
+}
+
+.footer-links a.external-link {
+    color: #60a5fa;
+}
+
+.footer-links a.external-link:hover {
+    color: #93c5fd;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: var(--footer-secondary-text);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon.facebook:hover {
+    color: #3b82f6;
+}
+
+.social-icon.instagram:hover {
+    color: #ec4899;
+}
+
+.social-icon.twitter:hover {
+    color: #60a5fa;
+}
+
+.social-icon.youtube:hover {
+    color: #ef4444;
+}
+
+/* Old Footer Styling - keeping for compatibility */
+footer:not(.bg-gray-900) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,7 +334,7 @@ footer {
     margin-top: 2rem;
 }
 
-footer p {
+footer:not(.bg-gray-900) p {
     margin: 0;
 }
 
@@ -253,6 +359,18 @@ section {
 }
 
 /* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .social-media {
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 600px) {
     header {
         grid-template-columns: 1fr;
@@ -295,5 +413,10 @@ section {
     .hero h1 {
         font-size: 1.2rem; /* Further reduced font size for smaller screens */
         padding: 0.3rem;
+    }
+    
+    footer.bg-gray-900 {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
     }
 }
