@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover exciting whitewater rafting trips with Bluesea - From family-friendly adventures to extreme rapids, find your perfect rafting experience">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <title>Trips | Bluesea Whitewater Rafting</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/rafting.css">
+    
+    <style>
+        /* Additional styles for trips page */
+        .trips-hero {
+            background: linear-gradient(rgba(38, 70, 83, 0.7), rgba(38, 70, 83, 0.7)), url('images/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .trips-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .trips-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent1-color);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent1-color);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent1-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(233, 196, 106, 0.3);
+        }
+        
+        .trip-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .trip-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .trip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .trip-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .trip-card-content {
+            padding: 1.5rem;
+        }
+        
+        .trip-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .trip-difficulty {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .difficulty-easy {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .difficulty-moderate {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .difficulty-extreme {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .trip-details-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .trip-details-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .trip-details-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .trips-table-section {
+            margin: 4rem 0;
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .trips-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trips-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .trips-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .trips-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: var(--accent2-color);
+            font-size: 1.1rem;
+        }
+        
+        .season-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .season-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .season-item {
+            text-align: center;
+            padding: 1rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+        }
+        
+        .season-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .trips-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .trip-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .trips-table {
+                font-size: 0.9rem;
+            }
+            
+            .trips-table th,
+            .trips-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Bluesea Whitewater Rafting Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section with Call to Action -->
+        <section class="trips-hero">
+            <h1>Thrilling Rafting Adventures</h1>
+            <p>From gentle family floats to heart-pounding extreme rapids, we offer unforgettable whitewater experiences for every adventurer. Choose your perfect river adventure today!</p>
+            <a href="contact.html" class="cta-button">
+                <i class="fas fa-calendar-alt"></i> Book Your Adventure Today
+            </a>
+        </section>
+
+        <!-- Featured Trip Details -->
+        <section>
+            <h2>Featured Adventures</h2>
+            <div class="trip-details">
+                <!-- Trip 1: Family Adventure -->
+                <article class="trip-card">
+                    <img src="images/Scenic-river-view.jpg" alt="Scenic family-friendly river rafting">
+                    <div class="trip-card-content">
+                        <h3>Family Rapids Adventure</h3>
+                        <span class="trip-difficulty difficulty-easy">Easy - Class I-II</span>
+                        <p>Perfect for families and first-time rafters! Enjoy gentle rapids, stunning scenery, and wildlife spotting along our most peaceful river section. This half-day adventure includes professional guides, safety equipment, and riverside snacks.</p>
+                        <ul class="trip-details-list">
+                            <li><span>Duration:</span> <span>4 hours</span></li>
+                            <li><span>Age Requirement:</span> <span>6+ years</span></li>
+                            <li><span>Group Size:</span> <span>6-8 people</span></li>
+                            <li><span>Season:</span> <span>May - September</span></li>
+                            <li><span>Price:</span> <span class="price">$85 per person</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Trip 2: Intermediate Challenge -->
+                <article class="trip-card">
+                    <img src="images/rafting1.jpg" alt="Intermediate whitewater rafting with moderate rapids">
+                    <div class="trip-card-content">
+                        <h3>Big Mallard Rapids</h3>
+                        <span class="trip-difficulty difficulty-moderate">Moderate - Class III-IV</span>
+                        <p>Experience the perfect balance of excitement and safety! Navigate through challenging rapids, deep pools, and spectacular rock formations. This full-day adventure includes lunch and professional photography service.</p>
+                        <ul class="trip-details-list">
+                            <li><span>Duration:</span> <span>8 hours</span></li>
+                            <li><span>Age Requirement:</span> <span>12+ years</span></li>
+                            <li><span>Group Size:</span> <span>6-10 people</span></li>
+                            <li><span>Season:</span> <span>April - October</span></li>
+                            <li><span>Price:</span> <span class="price">$145 per person</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Trip 3: Extreme Adventure -->
+                <article class="trip-card">
+                    <img src="images/happy-client.jpg" alt="Extreme whitewater rafting adventure">
+                    <div class="trip-card-content">
+                        <h3>Los Dientes del Diablo</h3>
+                        <span class="trip-difficulty difficulty-extreme">Extreme - Class V</span>
+                        <p>The ultimate adrenaline rush! Conquer the most challenging rapids in the region. This expert-level adventure features massive waves, technical maneuvers, and breathtaking drops. Only for experienced rafters seeking the ultimate challenge.</p>
+                        <ul class="trip-details-list">
+                            <li><span>Duration:</span> <span>10 hours</span></li>
+                            <li><span>Age Requirement:</span> <span>18+ years</span></li>
+                            <li><span>Group Size:</span> <span>4-6 people</span></li>
+                            <li><span>Season:</span> <span>June - August</span></li>
+                            <li><span>Price:</span> <span class="price">$295 per person</span></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Season Information -->
+        <section class="season-info">
+            <h2>Seasonal River Conditions</h2>
+            <p>Our rivers offer different experiences throughout the year, with varying water levels and conditions that affect the intensity of your adventure.</p>
+            <div class="season-grid">
+                <div class="season-item">
+                    <h4><i class="fas fa-seedling"></i> Spring (Mar-May)</h4>
+                    <p>High water levels, cooler temperatures, most challenging conditions</p>
+                </div>
+                <div class="season-item">
+                    <h4><i class="fas fa-sun"></i> Summer (Jun-Aug)</h4>
+                    <p>Perfect conditions, warm weather, ideal for all skill levels</p>
+                </div>
+                <div class="season-item">
+                    <h4><i class="fas fa-leaf"></i> Fall (Sep-Nov)</h4>
+                    <p>Lower water levels, beautiful scenery, great for beginners</p>
+                </div>
+                <div class="season-item">
+                    <h4><i class="fas fa-snowflake"></i> Winter (Dec-Feb)</h4>
+                    <p>Limited trips, indoor training programs available</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Trips Table -->
+        <section class="trips-table-section">
+            <h2>Complete Trip Overview</h2>
+            <p>Compare all our available rafting adventures to find the perfect fit for your group's experience level and time constraints.</p>
+            
+            <table class="trips-table">
+                <thead>
+                    <tr>
+                        <th>Trip Name</th>
+                        <th>Difficulty</th>
+                        <th>Duration</th>
+                        <th>Min Age</th>
+                        <th>Group Size</th>
+                        <th>Season</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Family Rapids Adventure</strong></td>
+                        <td>Class I-II</td>
+                        <td>4 hours</td>
+                        <td>6 years</td>
+                        <td>6-8 people</td>
+                        <td>May - Sep</td>
+                        <td class="price">$85</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Half Day Discovery</strong></td>
+                        <td>Class I-II</td>
+                        <td>3 hours</td>
+                        <td>8 years</td>
+                        <td>8-12 people</td>
+                        <td>Apr - Oct</td>
+                        <td class="price">$65</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Big Mallard Rapids</strong></td>
+                        <td>Class III-IV</td>
+                        <td>8 hours</td>
+                        <td>12 years</td>
+                        <td>6-10 people</td>
+                        <td>Apr - Oct</td>
+                        <td class="price">$145</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emerald Rapids Challenge</strong></td>
+                        <td>Class III</td>
+                        <td>6 hours</td>
+                        <td>10 years</td>
+                        <td>8-12 people</td>
+                        <td>May - Sep</td>
+                        <td class="price">$115</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Los Dientes del Diablo</strong></td>
+                        <td>Class V</td>
+                        <td>10 hours</td>
+                        <td>18 years</td>
+                        <td>4-6 people</td>
+                        <td>Jun - Aug</td>
+                        <td class="price">$295</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sunset Float</strong></td>
+                        <td>Class I</td>
+                        <td>2.5 hours</td>
+                        <td>4 years</td>
+                        <td>6-15 people</td>
+                        <td>Jun - Sep</td>
+                        <td class="price">$45</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Day Expedition</strong></td>
+                        <td>Class II-IV</td>
+                        <td>3 days</td>
+                        <td>14 years</td>
+                        <td>8-16 people</td>
+                        <td>May - Sep</td>
+                        <td class="price">$425</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Corporate Team Building</strong></td>
+                        <td>Class II-III</td>
+                        <td>5 hours</td>
+                        <td>16 years</td>
+                        <td>10-25 people</td>
+                        <td>Apr - Oct</td>
+                        <td class="price">$125</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; border-radius: 12px; margin: 2rem 0;">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready for Your Next Adventure?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Don't wait – the rapids are calling! Contact us today to secure your spot on one of our incredible whitewater rafting adventures.</p>
+            <a href="contact.html" class="cta-button" style="background-color: var(--accent1-color); color: var(--primary-color);">
+                <i class="fas fa-phone-alt"></i> Contact Us Now
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <h3>Bluesea Whitewater Rafting</h3>
+                <p>Experience the thrill of whitewater rafting with Colorado's premier adventure company.</p>
+                <p class="copyright">© 2025 Rapid Adventures | Eric Evijay Ohiani</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://www.figma.com/file/wireframe-trips-page" target="_blank" rel="noopener noreferrer" class="external-link">
+                        <i class="fas fa-external-link-alt"></i> Trips Page Wireframe
+                    </a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="https://facebook.com/blueseawhitewater" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/blueseawhitewater" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/blueseawhitewater" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com/blueseawhitewater" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
